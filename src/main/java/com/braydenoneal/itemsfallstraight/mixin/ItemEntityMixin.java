@@ -20,6 +20,6 @@ public class ItemEntityMixin {
     @Inject(method = "<init>(Lnet/minecraft/world/World;DDDLnet/minecraft/item/ItemStack;DDD)V", at = @At("TAIL"))
     private void init(World world, double x, double y, double z, ItemStack stack, double velocityX, double velocityY, double velocityZ, CallbackInfo info) {
         ItemEntity itemEntity = (ItemEntity) (Object) this;
-        itemEntity.setVelocity(0.0F, 0.0F, 0.0F);
+        itemEntity.setVelocity(0.0F, 10.25F, 0.0F);
     }
 }

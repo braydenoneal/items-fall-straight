@@ -13,16 +13,24 @@ import org.spongepowered.asm.mixin.Overwrite;
 
 @Mixin(Block.class)
 public class DropStackMixin {
+    /**
+     * @author Brayden O'Neal
+     * @reason Remove random item starting position.
+     */
     @Overwrite
     public static void dropStack(World world, BlockPos pos, ItemStack stack) {
         float f = EntityType.ITEM.getHeight() / 2.0F;
         double d = (float)pos.getX() + 0.5F;
-        double e = (float)pos.getY() + 0.5F - (double) f;
+        double e = (float)pos.getY() + 0.55F - (double) f;
         double g = (float)pos.getZ() + 0.5F;
 
         DropStackInvoker.dropStack(world, () -> new ItemEntity(world, d, e, g, stack), stack);
     }
 
+    /**
+     * @author Brayden O'Neal
+     * @reason Remove random item starting position.
+     */
     @Overwrite
     public static void dropStack(World world, BlockPos pos, Direction direction, ItemStack stack) {
         int i = direction.getOffsetX();
@@ -43,4 +51,3 @@ public class DropStackMixin {
         DropStackInvoker.dropStack(world, () -> new ItemEntity(world, d, e, h, stack, l, m, n), stack);
     }
 }
-

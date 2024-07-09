@@ -2,22 +2,20 @@
   "schemaVersion": 1,
   "id": "itemsfallstraight",
   "version": "${version}",
-
   "name": "itemsfallstraight",
   "description": "",
   "authors": [],
-  "contact": {},
-
+  "contact": {"repo": "https://github.com/brayden/itemsfallstraight"},
   "license": "All-Rights-Reserved",
-  "icon": "assets/itemsfallstraight/icon.png",
-
   "environment": "*",
-  "entrypoints": {},
-
-
+  "entrypoints": {
+    "client": [],
+    "main": ["com.braydenoneal.itemsfallstraight.Itemsfallstraight"]
+  },
+  "mixins": ["itemsfallstraight.mixins.json"],
   "depends": {
     "fabricloader": ">=${loader_version}",
-        "fabric": "*",
+    "fabric": "*",
     "minecraft": "${minecraft_version}"
   }
 }

@@ -1,0 +1,16 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.braydenoneal.itemsfallstraight.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": [
+    "DropStackInvoker",
+    "DropStackMixin",
+    "ItemEntityMixin"
+  ],
+  "client": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
